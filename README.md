@@ -6,15 +6,15 @@ https://www.ceneo.pl/84514582#tag=OneClickSearch
 3. Cheking the code of https responce
 4. Parse the html code of the first page with options
 5. Extract required data from parsad code
-6. If there are more pages, move to the next page and repeat step 2-5 for it
+6. If there are more pages, move to the next page and repeat step 2-6 for it
 7. Save extracted data
 
 ## Analysis of the structure of the webpage
 |Component|Selector|Variable|
 |---------|--------|--------|
-|opinion|div.js_product-review|opinion|
+|opinion|div.js_product-review:not(.user-post--highlight)|opinion|
 |opinion ID|data-entry-id|opinion_id|
-|author|user-post_author-name|author|
+|author|span.user-post_author-name|author|
 |recommendation|span.user-post__author-recomendation > em|recomendation|
 |number of stars|span.user-post_score-count|stars|
 |opinion’s content|div.user-post__text|content|
